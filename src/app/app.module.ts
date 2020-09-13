@@ -6,10 +6,20 @@ import { AppComponent } from './app.component';
 import { SignInComponent } from './view/sign-in/sign-in.component';
 import { SignUpComponent } from './view/sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, SignInComponent, SignUpComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
