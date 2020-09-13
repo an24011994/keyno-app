@@ -16,4 +16,13 @@ export class AuthService {
       }
     });
   }
+  signUp(name, mail, password) {
+    return this.http.post('https://conduit.productionready.io/api/users', {
+      "user": {
+        "username": name,
+        "email": mail,
+        "password": password,
+      }
+    });
+  }
 }
