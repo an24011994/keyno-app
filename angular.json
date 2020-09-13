@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "keyno-app"
+    }
+  },
+  "defaultProject": "keyno-app",
+  "cli": {
+    "analytics": "dba907d0-6311-47f8-b0d7-094c0071cf5f"
+  }
 }
