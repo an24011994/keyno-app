@@ -1,1 +1,18 @@
-<p>sign-up works!</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="text" [(ngModel)]="valueEmaill" name="something" matInput placeholder="Ex. pat@example.com">
+    <mat-hint>Errors appear instantly!</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input type="text" [(ngModel)]="valueName" name="something" matInput placeholder="Ex. NguyenBangocthao">
+    <mat-hint>Errors appear instantly!</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>password</mat-label>
+    <input type="password" [(ngModel)]="valuePassword" name="something" matInput placeholder="Your Password">
+    <mat-hint>Errors appear instantly!</mat-hint>
+  </mat-form-field>
+  <button (click)="click()">click</button>
+</form>
