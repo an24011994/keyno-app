@@ -7,19 +7,20 @@ import { AuthService } from 'src/app/core/service/auth.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  valueEmaill = 'nguyenbangocthao86@gmail.com';
-  valuePassword = '123456789';
-  valueName = 'thao12347646';
+  valueEmaill;
+  valuePassword;
+  valueName;
   constructor(private authService: AuthService) {
   }
 
   ngOnInit(): void {
-    this.authService.signUp(this.valueName, this.valueEmaill, this.valuePassword).subscribe(
+
+  }
+  click() {
+    this.authService.signUp(this.valueEmaill, this.valuePassword, this.valueName).subscribe(
       (data: any) => {
         console.log(data);
       }
     );
   }
-
-
 }

@@ -16,7 +16,15 @@ export class AuthService {
       }
     });
   }
-  signUp(name, mail, password) {
+  signUp(mail, password, name) {
+    console.log({
+      "user": {
+        "username": name,
+        "email": mail,
+        "password": password,
+      }
+    });
+
     return this.http.post('https://conduit.productionready.io/api/users', {
       "user": {
         "username": name,
