@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SignInComponent } from './view/sign-in/sign-in.component';
 import { SignUpComponent } from './view/sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent
+    SignUpComponent, SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +20,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule, FormsModule, MatInputModule, BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

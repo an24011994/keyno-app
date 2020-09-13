@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SignUpComponent } from './view/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: 'signup', component: SignUpComponent }
+  { path: 'signin', component: SignUpComponent }
 ];
 
 @NgModule({
