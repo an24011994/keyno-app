@@ -11,14 +11,17 @@ export class SignUpComponent implements OnInit {
   password = '123456789';
 
   constructor(private authService: AuthService) { }
-
+  valueEmaill = 'nguyenbangocthao86@gmail.com';
+  valuePassword = '123456789';
+  valueName = 'thao12347646';
+  c
   ngOnInit(): void {
-    this.authService.signIn(this.email, this.password).subscribe(
+    this.authService.signUp(this.valueName, this.valueEmaill, this.valuePassword).subscribe(
       (data: any) => {
         console.log(data);
-
       }
     );
   }
+
 
 }
