@@ -1,0 +1,17 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="email" [(ngModel)]="email" name="b" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <textarea
+      matInput
+      name="an"
+      placeholder="password"
+      [(ngModel)]="password"
+    ></textarea>
+  </mat-form-field>
+</form>
+<input type="submit" value="Login" (click)="loginSucess()" />

@@ -7,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent implements OnInit {
-  email = 'nguyenbangocthao86@gmail.com'
-  password = '123456789'
-  constructor(private authService: AuthService) { }
+  email;
+  password;
 
-  ngOnInit(): void {
-    this.authService.signIn(this.email, this.password).subscribe(
-      (data: any) => {
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {}
+  loginSucess() {
+    this.authService
+      .signIn(this.email, this.password)
+      .subscribe((data: any) => {
         console.log(data);
-
-      }
-    )
-
+      });
   }
 }
