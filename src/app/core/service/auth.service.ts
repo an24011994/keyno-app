@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService implements OnInit {
 
   constructor(private http: HttpClient) { }
-
+ngOnInit(){
+  
+}
   signIn(email, password) {
     return this.http.post('https://conduit.productionready.io/api/users/login', {
       "user": {
@@ -33,4 +35,6 @@ export class AuthService {
       }
     });
   }
+ 
+  
 }

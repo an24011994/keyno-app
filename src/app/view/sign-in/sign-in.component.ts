@@ -1,5 +1,5 @@
 import { AuthService } from 'src/app/core/service/auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,8 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent implements OnInit {
+  
   email;
   password;
+  list;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -18,11 +20,14 @@ export class SignInComponent implements OnInit {
     this.authService
       .signIn(this.email, this.password)
       .subscribe((data: any) => {
-        console.log(data);
+        this.list = data;
+        console.log(this.list);
+        
         this.router.navigate(['list']);
       });
   }
   resGister() {
     this.router.navigate(['signup']);
   }
+ 
 }
